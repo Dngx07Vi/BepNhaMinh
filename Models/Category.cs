@@ -1,0 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace BepNhaMinh.Models;
+
+public class Category
+{
+    public int Id { get; set; }
+    [Required, MaxLength(100)] public string Name { get; set; } = string.Empty;
+    [MaxLength(500)] public string Description { get; set; } = string.Empty;
+    [Required, MaxLength(300)] public string ImageUrl { get; set; } = string.Empty;
+    public ICollection<Recipe> Recipes { get; set; } = new List<Recipe>();
+}

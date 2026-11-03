@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bếp Nhà Mình - Gợi ý món ăn Việt và hướng dẫn nấu ăn chi tiết." />
+    <title>@ViewData["Title"] - Bếp Nhà Mình</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" asp-controller="Home" asp-action="Index"><span>🍳</span> BẾP NHÀ MÌNH</a>
+    <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <a asp-controller="Home" asp-action="Index">Trang chủ</a>
+      <a asp-controller="Recipe" asp-action="Index">Món ăn</a>
+      <a class="nav-highlight" asp-controller="Recipe" asp-action="Random">🎲 Ăn gì hôm nay?</a>
+      <a asp-controller="Favorite" asp-action="Index">♥ Yêu thích</a>
+    </nav>
+  </div>
+</header>
+<main>@RenderBody()</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><div class="brand footer-brand">🍳 BẾP NHÀ MÌNH</div><p>Hôm nay ăn gì không còn là câu hỏi khó.</p></div>
+    <div><h3>Khám phá</h3><a asp-controller="Home" asp-action="Index">Trang chủ</a><a asp-controller="Recipe" asp-action="Index">Món ăn</a><a asp-controller="Recipe" asp-action="Random">Ăn gì hôm nay?</a><a asp-controller="Favorite" asp-action="Index">Yêu thích</a></div>
+  </div>
+  <div class="container footer-bottom">© 2026 Bếp Nhà Mình</div>
+</footer>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

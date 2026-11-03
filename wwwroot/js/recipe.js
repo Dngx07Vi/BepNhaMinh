@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const loader=document.getElementById('randomLoader');const result=document.getElementById('randomResult');if(loader&&result){result.style.display='none';setTimeout(()=>{loader.style.display='none';result.style.display='grid'},1200)}});

@@ -1,0 +1,2 @@
+@model Category
+<a class="category-card" asp-controller="Recipe" asp-action="Index" asp-route-category="@Model.Name"><img src="@Model.ImageUrl" alt="@Model.Name" /><span>@Model.Name</span></a>

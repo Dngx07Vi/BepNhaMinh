@@ -1,0 +1,11 @@
+@model Recipe
+<div class="recipe-card">
+  <a class="recipe-image-wrap" asp-controller="Recipe" asp-action="Details" asp-route-id="@Model.Id"><img src="@Model.ImageUrl" alt="Món @Model.Name" class="recipe-image" loading="lazy" /></a>
+  <div class="recipe-card-body">
+    <div class="eyebrow">@Model.Category?.Name</div>
+    <h3><a asp-controller="Recipe" asp-action="Details" asp-route-id="@Model.Id">@Model.Name</a></h3>
+    <p>@Model.Description</p>
+    <div class="meta-row"><span>⏱ @(Model.PreparationTime + Model.CookingTime) phút</span><span>⭐ @Model.Difficulty</span></div>
+    <div class="card-actions"><a class="btn btn-primary btn-small" asp-controller="Recipe" asp-action="Details" asp-route-id="@Model.Id">Xem công thức</a><form asp-controller="Recipe" asp-action="ToggleFavorite" method="post" class="favorite-form"><input type="hidden" name="id" value="@Model.Id" /><input type="hidden" name="returnUrl" value="@(Context.Request.Path)@(Context.Request.QueryString)" /><button class="icon-btn" type="submit" aria-label="Yêu thích @Model.Name">♡</button></form></div>
+  </div>
+</div>

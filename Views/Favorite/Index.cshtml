@@ -1,0 +1,3 @@
+@model IEnumerable<Recipe>
+@{ ViewData["Title"] = "Yêu thích"; }
+<div class="container page-head"><div><span class="eyebrow">Bộ sưu tập của bạn</span><h1>Món ăn yêu thích</h1><p>Những món bạn muốn nấu lại, được lưu ngay trong Bếp Nhà Mình.</p></div></div><section class="container">@if(!Model.Any()){<div class="empty-state"><div>♡</div><h2>Chưa có món yêu thích</h2><p>Nhấn nút trái tim ở một món bất kỳ để lưu lại.</p><a class="btn btn-primary" asp-controller="Recipe" asp-action="Index">Khám phá món ăn</a></div>}else{<div class="recipe-grid">@foreach(var recipe in Model){<partial name="_RecipeCard" model="recipe" />}</div>}</section>
