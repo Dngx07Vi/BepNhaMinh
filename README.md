@@ -1,10 +1,11 @@
-# Bếp Nhà Mình
+<img width="1902" height="892" alt="image" src="https://github.com/user-attachments/assets/959cb070-7ee7-433e-8373-ec5021982d8a" /># Bếp Nhà Mình
 
 Website gợi ý món ăn và hướng dẫn nấu ăn, được tái cấu trúc từ prototype HTML/CSS/JavaScript thành ứng dụng **ASP.NET Core MVC + Entity Framework Core + SQLite**.
 
 ## Giới thiệu
 
 Bếp Nhà Mình giải quyết câu hỏi “Hôm nay ăn gì?” bằng kho công thức món Việt, tìm kiếm, lọc theo danh mục, chọn món ngẫu nhiên, xem công thức chi tiết và lưu món yêu thích.
+https://bepnhaminh.onrender.com/
 
 ## Tính năng
 
